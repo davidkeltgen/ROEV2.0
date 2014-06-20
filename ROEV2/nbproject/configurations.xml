@@ -4,6 +4,7 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>HKDriver.h</itemPath>
       <itemPath>HLPDriver.h</itemPath>
       <itemPath>main.h</itemPath>
       <itemPath>roe.h</itemPath>
@@ -41,7 +42,14 @@
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibStdlibItem>PosixThreads</linkerLibStdlibItem>
+          </linkerLibItems>
+        </linkerTool>
       </compileType>
+      <item path="HKDriver.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="HKeepingDriver.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="HLPDriver.c" ex="false" tool="0" flavor2="0">
@@ -77,6 +85,8 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="HKDriver.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="HKeepingDriver.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="HLPDriver.c" ex="false" tool="0" flavor2="0">
