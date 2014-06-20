@@ -17,14 +17,7 @@
  */
 int main(int argc, char** argv) {
 
-    int fdown = init_port();
-    
-    //send data forever
-    while(1)
-    {
-        sendData(fdown);
-    }
-
+    SendHLPCmds();
     return (EXIT_SUCCESS);
 }
 

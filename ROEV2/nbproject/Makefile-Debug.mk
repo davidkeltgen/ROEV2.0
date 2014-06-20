@@ -35,6 +35,8 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/HKeepingDriver.o \
+	${OBJECTDIR}/HLPDriver.o \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/roe.o
 
@@ -62,6 +64,16 @@ LDLIBSOPTIONS=
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/roev2: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/roev2 ${OBJECTFILES} ${LDLIBSOPTIONS}
+
+${OBJECTDIR}/HKeepingDriver.o: HKeepingDriver.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/HKeepingDriver.o HKeepingDriver.c
+
+${OBJECTDIR}/HLPDriver.o: HLPDriver.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/HLPDriver.o HLPDriver.c
 
 ${OBJECTDIR}/main.o: main.c 
 	${MKDIR} -p ${OBJECTDIR}
